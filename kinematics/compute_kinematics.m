@@ -6,10 +6,12 @@ lf = 0.125; lt = 0.250; % link lengths
 % ball foot
 % la.x = 0.030; la.y = 0.0;
 % hybrid
- la.x = 0.080; la.y = 0.110;
-% la.x = 0.080; la.y = 0.116;
+ % la.x = 0.080;la. la.y = 0.110;
+la.x = 0.080; la.y = 0.116;
 % j foot
 % la.x = 0.098; la.y = 0.112;
+% j foot
+%la.x = 0.065; la.y = 0.095;
 % c foot
 % la.x = 0.110; la.y = 0.055;
 

@@ -1,4 +1,4 @@
-% Bus object: BodyState
+% Bus object: BodyStateO
 clear elems;
 elems(1) = Simulink.BusElement;
 elems(1).Name = 'x';
@@ -28,8 +28,8 @@ elems(9) = Simulink.BusElement;
 elems(9).Name = 'ddz';
 elems(9).DataType = 'double';
 
-BodyState = Simulink.Bus;
-BodyState.Elements = elems;
+BodyStateO = Simulink.Bus;
+BodyStateO.Elements = elems;
 clear elems
 
 % Bus object: Motor State
@@ -42,8 +42,8 @@ elems(2) = Simulink.BusElement;
 elems(2).Name = 'w';
 elems(2).DataType = 'double';
 
-MotorState = Simulink.Bus;
-MotorState.Elements = elems;
+MotorStateO = Simulink.Bus;
+MotorStateO.Elements = elems;
 clear elems
 
 
