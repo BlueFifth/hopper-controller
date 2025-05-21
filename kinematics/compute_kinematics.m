@@ -4,10 +4,10 @@ lf = 0.125; lt = 0.250; % link lengths
 
 % Foot/Ankle Kinematics
 % ball foot
-% la.x = 0.030; la.y = 0.0;
+la.x = 0.030; la.y = 0.0;
 % hybrid
  % la.x = 0.080;la. la.y = 0.110;
-la.x = 0.080; la.y = 0.116;
+% la.x = 0.080; la.y = 0.116;
 % j foot
 % la.x = 0.098; la.y = 0.112;
 % j foot

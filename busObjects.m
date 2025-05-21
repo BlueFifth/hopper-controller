@@ -69,20 +69,32 @@ clear elems
 % Bus object: CAN
 clear elems;
 elems(1) = Simulink.BusElement;
-elems(1).Name = 'Load';
+elems(1).Name = 'BusLoad';
 elems(1).DataType = 'double';
 
 elems(2) = Simulink.BusElement;
-elems(2).Name = 'Warning';
-elems(2).DataType = 'double';
+elems(2).Name = 'BusOffStatus';
+elems(2).DataType = 'boolean';
 
 elems(3) = Simulink.BusElement;
-elems(3).Name = 'PassiveError';
+elems(3).Name = 'ErrorFrames';
 elems(3).DataType = 'double';
 
 elems(4) = Simulink.BusElement;
-elems(4).Name = 'BusOffStatus';
-elems(4).DataType = 'double';
+elems(4).Name = 'TransmitBufferOverrun';
+elems(4).DataType = 'boolean';
+
+elems(5) = Simulink.BusElement;
+elems(5).Name = 'RecieveBufferOverrun';
+elems(5).DataType = 'boolean';
+
+elems(6) = Simulink.BusElement;
+elems(6).Name = 'BusWarningLimit';
+elems(6).DataType = 'boolean';
+
+elems(7) = Simulink.BusElement;
+elems(7).Name = 'BusErrorPassive';
+elems(7).DataType = 'boolean';
 
 CAN = Simulink.Bus;
 CAN.Elements = elems;
