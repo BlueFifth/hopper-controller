@@ -4,7 +4,7 @@ lf = 0.125; lt = 0.250; % link lengths
 
 % Foot/Ankle Kinematics
 % ball foot
-la.x = 0.030; la.y = 0.0;
+% la.x = 0.030; la.y = 0.0;
 % hybrid
  % la.x = 0.080;la. la.y = 0.110;
 % la.x = 0.080; la.y = 0.116;
@@ -14,6 +14,8 @@ la.x = 0.030; la.y = 0.0;
 %la.x = 0.065; la.y = 0.095;
 % c foot
 % la.x = 0.110; la.y = 0.055;
+% new j foot
+la.x = 0.095-0.046; la.y = 0.046+0.015;
 
 % forward cartesian
 syms thetaL thetaR
@@ -28,7 +30,7 @@ ankle.x = 0.5*(knee.r.x + knee.l.x) - 0.5*sqrt(4*lt^2/R2-1)*(knee.l.y - knee.r.y
 ankle.y = 0.5*(knee.r.y + knee.l.y) - 0.5*sqrt(4*lt^2/R2-1)*(knee.r.x - knee.l.x);
 alpha = atan2(real(ankle.y-knee.r.y), real(ankle.x-knee.r.x));
 foot.x = ankle.x + la.x*cos(alpha) + la.y*cos(alpha+(pi/2));
-foot.y = ankle.y + la.x*sin(alpha) + la.y*sin(alpha+(pi/2));
+foot.y = ankle.y + la.x*sin(alpha) + la.y*sin(alpha+(pi/2))+0.046; % add foot radius
 
 ankle.r = sqrt(ankle.x^2 + ankle.y^2);
 ankle.phi = atan2(ankle.y, ankle.x);
