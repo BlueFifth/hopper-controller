@@ -29,8 +29,9 @@ def config_motor(ax: 'odrive.Axis'):
     ax.encoder.config.mode = EncoderMode.INCREMENTAL
     # configure can
     ax.config.can.node_id = 1 if ax==odrv0.axis0 else 2
-    ax.config.can.encoder_rate_ms = 2
+    ax.config.can.encoder_rate_ms = 1
     ax.config.can.heartbeat_rate_ms = 10
+    ax.config.can.iq_rate_ms = 1
     # run full calibration sequence
     ax.requested_state = AxisState.FULL_CALIBRATION_SEQUENCE
     while ax.current_state != AxisState.IDLE:
